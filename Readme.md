@@ -74,23 +74,12 @@ public void sendEmail() {
     // Additional code for sending the email...
 }
 ```
+![Postman](Postman.png).  
+  
+  
 
 ### JSON Structure Example:
-```json
-[
-{
-  "first_name": "John",
-  "last_name": "Doe",
-  "email": "john.doe@example.com",
-  "company_name": "Example Corp"
-},
-{
-  "first_name": "Jane",
-  "last_name": "Smith",
-  "email": "jane.smith@example.com",
-  "company_name": "Innovate Ltd"
-}
-]
+![Postman](Json.png)
 
 
 
