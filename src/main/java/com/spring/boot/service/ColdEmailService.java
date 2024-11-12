@@ -16,8 +16,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.spring.boot.EmailTemplate.EmailTemplate;
+import com.spring.boot.model.User;
 
-import Model.User;
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
 
