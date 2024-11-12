@@ -24,7 +24,7 @@ public class ColdEmailController {
 	
 	@PostMapping("/send-mail")
 	public ResponseEntity<String> sendEmail(@ModelAttribute EmailRequest emailRequest) {
-		logger.info("Received request to send emails with file: {}", emailRequest.getFileName());
+		logger.info("Received request to send emails...");
 
 		if (emailRequest.getFile().isEmpty()) {
 			logger.warn("File is empty, please upload a valid JSON file.");
@@ -33,11 +33,11 @@ public class ColdEmailController {
 
         try {
             coldEmailService.sendEmailToHR(emailRequest.getFile());
-            logger.info("Email sending process started successfully for file: {}", emailRequest.getFileName());
-            return ResponseEntity.ok("Emails are being sent successfully.");
+            logger.info("Email sending process started successfully...");
+            return ResponseEntity.ok("Emails are being sent successfully...");
         } catch (Exception e) {
-            logger.error("Error processing file: {}", emailRequest.getFileName(), e);
-            return ResponseEntity.status(500).body("An error occurred while sending emails.");
+            logger.error("Error processing file: ", e);
+            return ResponseEntity.status(500).body("An error occurred while sending emails...");
         }
 	}
 }
